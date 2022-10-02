@@ -11,4 +11,10 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.3.254/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+
+# Modify default hostname
+sed -i 's/OpenWrt/Esom/' package/base-files/files/bin/config_generate
+
+# Modify default theme
+sed -i 's/luci-theme-bootstrap/luci-theme-neobird/' feeds/luci/collections/luci/Makefile
